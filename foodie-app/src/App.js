@@ -6,9 +6,11 @@ import Card from "./Pages/Homepage/Card/Card";
 import { FooterContainer } from './Container/Footer'
 // import { FooterContainer1 } from './Container/Footer'
 import { FooterContainer2 } from './Container/Footer'
-import LoginSignup from "./Pages/Login";
+// import ValidatedLogin from "./Component/Login/ValidatedLogin";
 // import VerticalLinearStepper from "./Pages/CheckOut";
 // import Quickview from "./Pages/QuickView";
+// import "./Component/Login/Login.css";
+
 
 function App() {
   return (
@@ -18,7 +20,7 @@ function App() {
       <Card />
       <FooterContainer />
     <FooterContainer2 />
-    <LoginSignup/>
+    {/* <ValidatedLogin/> */}
       {/* <Copyright/> */}
       {/* <VerticalLinearStepper /> */}
     </div>

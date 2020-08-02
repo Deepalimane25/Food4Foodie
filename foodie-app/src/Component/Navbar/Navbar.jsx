@@ -2,11 +2,11 @@ import React from "react";
 import Style from "./Navbar.module.scss";
 // import Footer from "../Footer";
 import Logo from "../../Assets/Images/Logo.jpg"; 
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import LoginSignup from "../../Pages/Login"
+// import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+// import LoginSignup from "../../Pages/Login"
 function Navbar() {
   return (
-    <Router>
+    // <Router>
     <div className={Style.main_container}>
       <img src = {Logo} className={Style.logo} alt = {Logo}/>
       <h2 className={Style.logo1}>_FOOD 4 FOODIE_<h6 className={Style.tagline}>Faster than you can imagine</h6></h2>
@@ -25,11 +25,11 @@ function Navbar() {
           <i className="fas fa-cart-plus">&nbsp;Cart</i>
         </li>
       </ul>
-      <Switch>
+      {/* <Switch>
               <Route exact path='../../Pages/SignIn.js' component={LoginSignup} />
-      </Switch>
+      </Switch> */}
     </div>
-    </Router>
+    // </Router>
   );
 }
 
