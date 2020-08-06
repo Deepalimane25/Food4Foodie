@@ -1,0 +1,147 @@
+.Cart{
+    /* background: "url(" + CartEmpty + ")", */
+        opacity: 0.5;
+        background-repeat: no-repeat;
+        min-height: 15em;
+        background-size: contain;
+}
+
+.CartContain {
+    padding: 26px;
+    background: #fff;
+    margin-top: 2.4rem;
+}
+
+.CartHead h1{
+     
+        color: #282C3F;
+        margin: 0px;
+        margin-top: 2rem;
+    
+}
+
+.CartSubHead {
+    font-size: medium;
+    color: indigo;
+    padding: 0px 1px;
+    padding-bottom: 5px;
+    /* "& span": {
+        color: "#79A2DC",
+        fontWeight: "bold"
+    } */
+}
+
+.CartItemHead {
+    color: grey;
+    font-size: medium;
+    font-weight: bold;
+}
+
+head {
+    display: flex;
+     flex: 1;
+    flex-direction: row;
+}
+
+.headImage {
+    margin-right: 1rem;
+    
+    /* img{
+        width: 4rem;
+    } */
+}
+
+.headTextHead { font-weight: bold;
+ 
+    font-size: 1rem; }
+
+.headTextSubHead { color: grey; font-size: large; }
+
+.Item {
+    display: flex;
+    flex-direction: row;
+    /* padding: "1rem 0rem", */
+    font-size: medium;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0px;
+}
+
+.ItemName {
+    width: 40%;
+}
+/* Total: {
+    display: "table",
+    width: "100%",
+    fontSize: ".8rem",
+    color: "#757575",
+    "&>div": {
+        "&>div": {
+            display: "table-cell",
+            padding: "4px 0px",
+            "&:last-child": {
+                textAlign: "right"
+            }
+        },
+        display: "table-row"
+    }
+}, */
+/* TotalPrice: {
+    display: "flex",
+    flexDirection: 'row',
+    justifyContent: "space-between",
+    padding: "1rem 0rem",
+    fontWeight: "bold",
+    fontSize: ".8rem"
+}, */
+/* Suggestion: {
+    padding: ".8rem 0px",
+    borderTop: "1px dashed gray",
+    borderBottom: "1px dashed gray",
+    marginBottom: "5px",
+    "& textarea": {
+        border: "0px",
+        resize: "none",
+        outline: "none",
+        width: "100%",
+        font: "inherit",
+        fontSize: ".8rem",
+        marginTop: "4px"
+    }
+} */
+
+/* ItemsList: {
+    padding: "1.5rem 0",
+    overflowY: "scroll",
+    paddingRight: '.5rem'
+} */
+
+/* .SubTotalPrice {
+
+    paddingLeft: "0px"
+} */
+
+.HeadPrice {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+    color: indigo;
+}
+
+.SubHeadPrice {
+    font-size: 8rem;
+    color: gray;
+}
+
+/* .CartFooter {
+    "& button": {
+        background: "#60B246",
+        width: "100%",
+        padding: "1rem",
+        border: "none",
+        fontSize: "1.2rem",
+        color: "#fff",
+        fontWeight: "bold",
+        outline: "none"
+    } */

@@ -2,8 +2,7 @@ import React from "react";
 import Style from "./Navbar.module.scss";
 // import Footer from "../Footer";
 import Logo from "../../Assets/Images/Logo.jpg"; 
-// import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-// import LoginSignup from "../../Pages/Login"
+// import{NavLink, Router} from "react-router-dom";
 function Navbar() {
   return (
     // <Router>
@@ -15,9 +14,8 @@ function Navbar() {
           <i className="fas fa-house-user">&nbsp;Home</i>
         </li>
         <li>
-        {/* <Link to={'../../Pages/SignIn.js'} className="nav-link"> SignIn </Link> */}
         <i className="fas fa-user-lock">&nbsp;SignIn</i>
-
+        {/* <NavLink className="nav-link" exact to="./component/Login/Login">SignIn</NavLink> */}
         </li>
 
         <li>
