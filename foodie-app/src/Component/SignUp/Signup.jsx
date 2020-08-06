@@ -1,101 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Signup.css';
 
-const validEmailRegex = RegExp(
-  // /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
-);
-const validateForm = errors => {
-  let valid = true;
-  Object.values(errors).forEach(val => val.length > 0 && (valid = false));
-  return valid;
-};
+const Signup = () =>{
 
-
-
-class Signup extends React.Component{
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      fullName: null,
-      email: null,
-      password: null,
-      errors: {
-        fullName: '',
-        email: '',
-        password: '',
-      }
-    };
-  }
-
-  handleChange = (event) => {
-    event.preventDefault();
-    const { name, value } = event.target;
-    let errors = this.state.errors;
-
-    switch (name) {
-      case 'fullName': 
-        errors.fullName = 
-          value.length < 5
-            ? 'Full Name must be at least 5 characters long!'
-            : '';
-        break;
-      case 'email': 
-        errors.email = 
-          validEmailRegex.test(value)
-            ? ''
-            : 'Email is not valid!';
-        break;
-      case 'password': 
-        errors.password = 
-          value.length < 8
-            ? 'Password must be at least 8 characters long!'
-            : '';
-        break;
-      default:
-        break;
+  const [data, setData] = useState(
+    {
+      name: "",
+      phone: "",
+      email: "",
+      password: "",
     }
+  );
+  
+  const InputEvent = (event) => {
+    const {name, value} = event.target;
+    setData((preVal) => {
+      return{
+        ...preVal,
+        [name]:value,
+      };
+    });
+  };
+  
+  const formSubmit = (e) => {
+    e.preventDefault();
+    alert(`SignUp Successfull !!!`)
+  };
 
-    this.setState({errors, [name]: value});
-  }
-
-  handleSubmit = (event) => {
-    event.preventDefault();
-    if(validateForm(this.state.errors)) {
-      console.info('Valid Form')
-    }else{
-      console.error('Invalid Form')
-    }
-  }
-
-  render(){
-    const {errors} = this.state;
+  
     return(
       <div className={'authBox'}>
         <div className={'leftBox'}>
         <div className={'box'}>
             <div className={'titleAuth'}>Register</div>
-            <form onSubmit={this.handleSubmit} noValidate>
+            <form onSubmit={formSubmit}>
             <div className={'inputSBox'}>
-              <input className={'inputS'} type={'text'} placeholder={'Name'} onChange={this.handleChange} noValidate/>
-              {errors.fullName.length > 0 && 
-                <span className='error'>{errors.fullName}</span>}
+              <input className={'inputS'} type={'text'}  name="name" value={data.name} onChange={InputEvent} placeholder={'Name'} required/>
             </div>
             <div className={'inputSBox'}>
-              <input className={'inputS'} type={'phone'} placeholder={'Phone Number'}/>
+              <input className={'inputS'} type={'phone'} name="phone" value={data.phone} onChange={InputEvent} placeholder={'Phone Number'} required/>
             </div>
             <div className={'inputSBox'}>
-              <input className={'inputS'} type={'text'} placeholder={'E-Mail'} onChange={this.handleChange} noValidate/>
-              {errors.email.length > 0 && 
-                <span className='error'>{errors.email}</span>}
+              <input className={'inputS'} type={'text'} name="email" value={data.email} onChange={InputEvent} placeholder={'E-Mail'} required/>
             </div>
             <div className={'inputSBox'}>
-              <input className={'inputS'} type={'password'} placeholder={'Password'} onChange={this.handleChange} noValidate/>
-              {errors.password.length > 0 && 
-                <span className='error'>{errors.password}</span>}
+              <input className={'inputS'} type={'password'} name="password" value={data.password} onChange={InputEvent} placeholder={'Password'} required/>
             </div>
             <div>
-              <input type="button" value="SignUp" className={'btnAuth'} onClick="msg()"/>
+              <input type="submit" value="SignUp" className={'btnAuth'} onClick="msg()" />
             </div>
             </form>
 
@@ -113,7 +65,6 @@ class Signup extends React.Component{
       </div>
 
     )
-  }
 }
 
 export default Signup;
