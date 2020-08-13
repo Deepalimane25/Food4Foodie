@@ -1,0 +1,71 @@
+.toggle-menu {
+  top: 10px;
+  margin: 0 10px;
+  height: 35px;
+  border-radius: 10rem;
+  width: 35px;
+  outline: none;
+  z-index: 1;
+  background-color: rgba(64, 194, 133, 0.693);
+  border-color: rgba(64, 194, 133, 0.693);
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    // margin: 5px 0 !important;
+  }
+
+  .cuisines{
+    height: 300px;
+    overflow: scroll;
+    overflow-x: hidden;
+    // overflow-y: hidden;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  .cuisines li:first{
+    margin-top: 1rem;
+  }
+
+li{
+    margin: 0.5rem 0;
+    color: black;
+    /* background-color: blue; */
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  }
+
+p{
+    font-size: 1.2rem;
+    margin-left: 25px;
+}
+
+.filter[type="text"] {
+  padding: 3px;
+  // font-size: 1px;
+  border: 1px solid grey;
+  text-align: center;
+  width: 70%;
+  background: #f1f1f1;
+  border-radius: 5px;
+  margin:0 20px 10px 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.filterBottom{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.filterBottom button{
+  width: 35%;
+}

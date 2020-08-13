@@ -1,0 +1,147 @@
+.foodcard{
+  height:400px;
+  width: 26%;
+  border-radius: 5px;
+  padding:0px 0px;
+  align-items: center;
+}
+.foodcard:hover {
+  box-shadow: 5px 6px 8px 5px rgba(0,0,0,0.3);
+  transition: 0.3s;
+  align-content: center;
+  align-items: center;
+}
+
+.container1 .divshow{
+display:block;
+}
+
+.container1 .nodivshow{
+display:none;
+}
+
+a{
+text-decoration:none;
+}
+
+img {
+height:200px;
+width:92%;
+// border-radius: 5px 5px 0 0;
+// margin:25px 25px 25px 25px;
+padding-left: 25px;
+padding-top: 25px;
+}
+
+.container1 {
+padding: 0px 16px;
+
+}
+.container1 div{
+margin-bottom:5px;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-evenly;
+}
+.container1 span{
+font-size: 12px;
+padding-left: 7px;
+}
+.container1 h3{
+font-size: 15px; 
+padding-bottom:1px;
+padding-left: 7px;
+color:black;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container1 h4{
+font-size: 12px; 
+padding-bottom:1px;
+padding-left: 7px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container1 p{
+font-size: 12px; 
+padding:2px 0;
+text-align: center;
+color:black;
+background-color: green($color: #000000);
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.data{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #535665 ;
+  font-size: smaller;
+}
+
+.rating{
+  background-color: rgb(72, 196, 121);
+  color: white;
+  padding: 4px 6px ;
+  text-align: center;
+  width: fit-content;
+}
+
+
+@media only screen and (max-width: 600px),(max-width: 800px){
+  .foodcard{
+    height:300px;
+    width: 40%;
+    border-radius: 3px;
+    padding: 5px 0px;
+    text-align: center;
+  }
+  img {
+    height:70px;
+    width:60%;
+    padding-left: 15px;
+    padding-top: 15px;
+    }
+    .container1 span{
+      font-size: 6px;
+      padding-left: 4px;
+      }
+      .container1 h3{
+      font-size: 14px; 
+      padding-bottom:1px;
+      padding-left: 4px;
+      color:black;
+      font-weight: 30;
+      // font-family: fantasy;
+      }
+      .container1 h4{
+      font-size: 3px; 
+      padding-bottom:1px;
+      padding-left: 4px;
+      }
+      
+      .container1 p{
+      font-size: 6px; 
+      padding:2px 0;
+      text-align: center;
+      color:black;
+      background-color: green($color: #000000);
+   }
+
+   .rating{
+    background-color: rgb(72, 196, 121);
+    color: white;
+    padding: 4px 6px ;
+    text-align: center;
+    width: fit-content;
+  }
+
+  .data{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #535665 ;
+    font-size: xx-small;
+  }
+
+}
